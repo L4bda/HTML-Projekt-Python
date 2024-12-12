@@ -5,3 +5,39 @@
     padding: 0.5rem;
     display: inline;
 }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.projectfont {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100,
+      "YTLC" 500;
+  }
+  /* from https://stackoverflow.com/questions/7503183/what-is-the-easiest-way-to-create-an-html-mouseover-tool-tip */
+  [data-tooltip] {
+    position: relative; /* Make the span positioned relative to the tooltip */
+    display: inline-block; /* Keep it inline with the text */
+  }
+  
+  [data-tooltip]:hover::after {
+    display: block;
+    position: absolute;
+    content: attr(data-tooltip);
+    background-color: rgba(0, 0, 0, 0.75); /* Dark background with transparency */
+    color: white; /* White text color */
+    padding: 8px 12px; /* Padding inside the tooltip */
+    border-radius: 6px; /* Rounded corners */
+    top: -2em; /* Position above the text */
+    left: 50%; /* Center horizontally relative to the text */
+    transform: translateX(-50%); /* Adjust to make sure it is perfectly centered */
+    white-space: normal; /* Allow text to break into multiple lines */
+    word-wrap: break-word; /* Ensure long words break within the tooltip */
+    max-width: 400px; /* Set a maximum width for larger content */
+    min-width: 150px; /* Set a minimum width to avoid tooltip shrinking too much */
+    text-align: left; /* Left-align the text inside the tooltip */
+    z-index: 10; /* Ensure the tooltip appears above other elements */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow for a 3D effect */
+    pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+  }
