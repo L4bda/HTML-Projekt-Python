@@ -56,16 +56,113 @@
                 <td>+ , - , / , % , *, print</td>
                 <td>print</td>
               </tr>
-              <tr>
-                <th scope="row">Memory</th>
-                <td>Wenig</td>
-                <td>Abhänging</td>
-                <td>Abhänging</td>
-              </tr>
-            </tbody>
           </table>
     </div>
+    <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+      Python bietet dazu noch weitere komplexere Datentypen an. Jene heißen Sets, Dictionaries, Tuples und Lists.
+      <br>
+      <h2>Lists:</h2> Lists erlauben es mehrere Daten in einer Variabel unterzubringen. Eine list is sortiebrbar, veränderbar und erlaubt sowohl duplikate als auch unterschiedliche Datentypen.
+      </div>
+      <pre id="code" class="mid px-3 container-fluid">
+tolleliste = ["Hi", True, 1 , 2 , "a"]
+print(f"Die ganze liste: {tolleliste}")
 
+#Auch einzelne objekte einer liste können ausgewählt werden
+
+print(f"Element 1 der liste:{tolleliste[1]}")
+      </pre>
+      <br>
+      <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+>>>['Hi', True, 1, 2, 'a']
+   True
+   </pre>
+   <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    Überraschenderweise wird hier True gedruckt anstatt vomn Hi. Das Geschiet, da in fast allen Programmiersprachen bei 0 angefangen zu zählen. Daher müsste man um das Objekt Hi zu finden tolleliste[0] nutzen.
+    Weiterhin können Listen sortiert werden. Python ermöglicht das überaus einfach durch eingebaute funktionen.
+    </div>
+    <pre id="code" class="mid px-3 container-fluid">
+tolleliste = [8, 4, 2, 9, 1, 5, 6, 7, 3, 0]
+print(f"Die normale Liste: {tolleliste}")
+      
+#Python hat eigene Funktionen zur sortierung von Listen
+      
+tolleliste.sort()
+print(f"Die sortierte Liste: {tolleliste}")
+      
+#Oder andersrum:
+      
+tolleliste.sort(reverse=True)
+print(f"Die sortierte Liste von oben nach unten: {tolleliste}")
+      
+#Oder Alphabetisch:
+
+flugzeugmarken = ["Boeing", "Airbus", "General Dynamics", "Lockhead Martin", "BAE Systems", "Eurofighter Jagdflugzeug GMBH"]
+print(f"Eine Liste mit Namen von Flugzeugherstellern: {flugzeugmarken}") <!--Grüße an Dansh btw.-->
+flugzeugmarken.sort()
+print(f"Die selbe Liste sortiert: {flugzeugmarken})
+      </pre>
+      <br>
+      <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+>>>Die normale Liste: [8, 4, 2, 9, 1, 5, 6, 7, 3, 0]
+   Die sortierte Liste: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   Die sortierte Liste von oben nach unten: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+   Eine Liste mit Namen von Flugzeugherstellern: ['Boeing', 'Airbus', 'General Dynamics', 'Lockhead Martin', 'BAE Systems', 'Eurofighter Jagdflugzeug GMBH']
+   Die selbe Liste sortiert: ['Airbus', 'BAE Systems', 'Boeing', 'Eurofighter Jagdflugzeug GMBH', 'General Dynamics', 'Lockhead Martin']
+      </pre>
+   <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    Viele andere Programmiersprachen zwingen die Benutzer solche funktionen selbständig zu bauen. Deshalb wird Python oft als sehr einfach eingestuft.
+    <br>
+    <h2>Sets:</h2>Sets sind ählich zu lists. Der unterschied ist, dass sie absoulute unverbunden sind. Sie sind einer <span data-tooltip="Linked Lists sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des Nächsten Elementes enthält. Jene sind besser für memory managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory verbunden sind.">linked list</span> Ählich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
+    </div>
+    <pre id="code" class="mid px-3 container-fluid">
+set1 = {"Auto", "Flugzeug", "Zug", "Auto"} # Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden
+
+print(set1)
+    </pre>
+    <br>
+    <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+>>>{'Zug', 'Flugzeug', 'Auto'}
+</pre>
+<br>
+<div class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">Oder:</div>
+<pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+  >>>{'Flugzeug', 'Zug', 'Auto'}
+  </pre>
+<br>
+<pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+  >>>{'Auto', 'Zug', 'Flugzeug'}
+  </pre>
+  <br>
+  <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+  und so weiter...
+  Weiterhin ist es deshalb unmöglich ein spezifischel Element zu erhalten. Siehe hier:
+  </div>   
+  <pre id="code" class="mid px-3 container-fluid">
+set1 = {"Auto", "Flugzeug", "Zug", "Auto"} # Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden
+
+print(set1[0])
+  </pre>
+  <br>
+  <pre id="output" class="mid px-3 container-fluid">
+Traceback (most recent call last):
+  File "/home/******/Downloads/HTML-Projekt-Python-main/testing.py", line 3, in <module>
+    print(set1[0])
+          ~~~~^^^
+<b>TypeError</b>: 'set' object is not subscriptable
+  </pre>
+  <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+Hier haben wir auch unseren ersten Fehler. Da Python eine interpretierte Programmiersprache ist geht ist eine Linie nach der anderen runter und stopt erst mit Ende des Programmes oder bei einem Fehler. Traceback heißt soviel wie: Hier liefs erstmal schief. Danach zeigt es wo sich die Datei befindet, in welcher Zeile der fehler ist und wo genau. Zum schluss gibt es einen Fehlertyp mit Erklärung.
+Es gibt trotzdem Möglichkeiten einzelne Objekte zu finden, jene werden aber erst in Loops besprochen.
+Um zu schauen ob ein Objekt existiert jedoch gibt es volgende einfache Lösung.
+</div>
+<pre id="code" class="mid px-3 container-fluid">
+set1 = {"Auto", "Flugzeug", "Zug", "Auto"}
+#Befindet sich Auto in diesem Set?
+print("Auto" in set1) 
+#Befindet sich Boot in diesem Set?
+imset = "Boot" # Nur um zu zeigen, dass es auch mit Variabeln funktioniert
+print(imset in set1)212
+</pre>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
