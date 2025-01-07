@@ -32,7 +32,7 @@
     <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
     <h2 class="text-center">Loops</h2>
     <div id="erklaerung">
-     Es gibt zwei Arten von Loops in Python. For Loops und While Loops.<br>
+     Es gibt zwei Arten von Loops in Python. for Loops und While Loops.<br>
      <h2>While Loops:</h2>
      While-Loops wiederholen ihren Inhalt solange wie die in dem While Loop vorhandene Boolean True ist.
     </div>
@@ -63,13 +63,64 @@ while(True):
 x = True
 while(x):
   #Rest des Codes
-</div>
 </pre>
-<h2>For Loops:</h2> 
-For Loops iterieren über eine List oder einen <span data-tooltip="Da Strings nur Arrays(hier gennant Lists) von Chars(Characters) sind können auch jene als Liste gewertet gewerden."><u>String</u></span> bis zu dessen Schluss. Dabei benötigt der For Loop 2 Argument. Erstens ein oder mehrere Variabeln welche den Inhalt der Liste am gegebenem Punkt kopiert und die Liste selber. 
+<div id="erklaerung">
+<h2>for Loops:</h2> 
+for Loops iterieren über eine List oder einen <span data-tooltip="Da Strings nur Arrays(hier gennant Lists) von Chars(Characters) sind können auch jene als Liste gewertet gewerden."><u>String</u></span> bis zu dessen Schluss. Dabei benötigt der for Loop 2 Argument. Erstens ein oder mehrere Variabeln welche den Inhalt der Liste am gegebenem Punkt kopiert und die Liste selber. 
 </div>
 <pre id="code">
-i = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"] 
+lied = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"]
+for wörter in lied:
+  print(wörter)
 </pre>
+<pre id="output">
+>>> Alle
+>>> meine
+>>> Entchen
+>>> schwimmen
+>>> auf
+>>> dem
+>>> See
+</pre>
+<div id="erklaerung">
+  Auch bietet Python eine Funktion um automatisch eine Liste von Integern in numerischer Reihenfolge, also i, i+1, i+2... zu kreieren, mit der es möglich ist einen for loop zu erstellen, wo die erste Variabel ein aufsteigender Integer ist.
+  Jene Funktion heißt range. range nimmt ein minimum von zwei Argumenten. Einen optionalen Startwert, der sollte er nicht vorhanden sein durch 0 ersetzt wird und einen notwendigen Endwert. 
+</div>
+<pre id="code">
+x = list(range(0, 10)) #Zur demonstration: Nutzt die list() Funktion und die range() Funktion um eine Liste mit 10 Zahlen von 0 aus zu kreieren.
+print(x)
+</pre>
+<pre id="output">
+>>> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</pre>
+In einem for Loop:
+<pre id="code">
+lied = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"]
+for i in range(len(lied)): #len(lied) wird hier anstatt von einem Int verwendet um keinen Fehler zu verursachen,
+  print(i, lied[i])        # könnte aber auch durch 7 ersetzt werden
+</pre>
+<pre id="output">
+>>> 0 Alle
+>>> 1 meine
+>>> 2 Entchen
+>>> 3 schwimmen
+>>> 4 auf
+>>> 5 dem
+>>> 6 See 
+</pre>
+Auch ist es möglich einen loop vorzeitig abzubrechen durch das Benutzen von break:
+<pre id="code">
+lied = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"]
+for i in lied:
+  if i != "schwimmen":
+    print(i)
+  else:
+    break
+</pre>
+<pre id="output">
+>>> Alle
+>>> meine
+>>> Entchen 
+  </pre>
 </body>
 </html>
