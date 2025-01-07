@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="Python-logo-notext.svg"><!--Von https://de.m.wikipedia.org/wiki/Datei:Python_logo_and_wordmark.svg Lizens: GNU GPL--></html>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Python</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="python_css.css" rel="stylesheet">
+  </head>
+  <body class="projectfont pb-5">
+    <nav class="bg-info-subtle navbar navbar-expand-sm navbar-nav bg-purple"> <!-- zum zentrieren hier navbar-nav als class haben sonst navbar-nav entfernen damit es von links beginnt-->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Intro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="data.html">Datentypen</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">If/Else statemants, Libraries and Functions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="loops.html">Loops</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">No clue</a> 
+        </li>      
+      </ul>
+    </nav>
+    </div>
+    <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
+<h2 class="text-center">If-Else Statements</h2>
+<div id="erklaerung">
+    If-Else Statements erlauben es Code nur dann auszuführen, sollte zuvor eine Boolean zu True evaluiert werden, bzw. eine Aussage wahr sein. If-Else Statement werden überall verwendet und sind unfassbar wichtig.
+</div>
+<pre id="code">
+x = 2
+if x == 2:
+    print(f"x = 2")    
+</pre>
+<pre id="output">
+>>> x = 2
+</pre>
+<div id="erklaerung">
+Wichtig ist hierbei zu bemerken, dass auf ein If Statement immer ein Doppelpunkt folgen muss, einen Zeilenumbruch und 4 Leerzeichen Platz vom Anfang des If Statements, erreichbar durch das einmalige drücken der Tabulator-Taste.
+<br>
+Sollte ein If Statement als Unwahr evaluiert werden springt es zum nächsten, nicht eingeschobenem Codeblock oder, falls vorhanden, dem nächsten Else Statement. Ein Else Statement kann nur ausgeführt werden, sollte das vorherige If Statement nicht eintreffen.
+Beispiel:
+</div>
+<pre id=code>
+x = 3
+if x == 2:
+    print(f"x = 2")
+else:
+    print(f"x != 2, x = {x}")
+</pre>
+<pre id="output">
+>>> x != 2, x = 3
+</pre>
+<div id="erklaerung">
+    If Statements haben mehrere logische Operationen. Jene sind: ==, !=, &lt;, &gt;, &lt;=, &gt;=, and, or, not. Da &lt;, &gt;, &lt;=, &gt;=, and, or alle aus der Pysik oder Mathematik bekannt sein sollten werde ich jene nicht erklären. == jedoch bedeutet: Ist äquievalent zu {irgendwas} und sollte nicht mit = verwechselt werden, was benutzt wird um einer Variabel einen Wert zu geben. != ist das gegenteil und bedeutet so viel wie: Ist nicht äquivalent zu {irgendwas}. Not Vertauscht einfach den Wert eineer Boolean zum gegenteil.
+    <br>
+    Weiterhin existiert eine Mischung zwischen if und else Statements, gennant elif. Jenes ist ein else, mit einer if Kondition.
+    Um ein Beispiel mit allen Funktionen zu geben:
+</div>
+<pre id="code">
+import sys
+
+def main():
+    print("Programm fährt fort")
+    #Rest des Programmes
+    sys.exit(0)
+
+def verification():
+    ans = input("Möchten sie fortfahren? Ja/Nein: ")
+    if ans == "Ja" or ans == "ja":
+        main()
+    elif ans == "Nein" or ans == "nein":
+        print("Programm wird abgebrochen.")
+        sys.exit(1)
+    else:
+        verification()
+
+verification()
+
+</pre> <!--Warum pack ich hier recurrsion rein????? Ich will das nicht erklären-->
+<div id="erklaerung">
+Schritt für Schritt Erklärung: 
+ <table class="table"> <!--https://getbootstrap.com/docs/4.0/content/tables/-->
+    <thead>
+      <tr>
+        <th scope="col">Code</th>
+        <th scope="col">Erklärung</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>import sys</td>
+        <td>Hier wird eine <span data-tooltip="Eine Libary ist eine kollektion von einer Programmiersprache hinzugefügten Funktionen. Beispielsweise Zufallsgeneratoren, Funktionen zum Zugriff aufs Betriebssystem und vieles mehr."><u>Libary</u></span> importiert, welche dafür benutzt wird das Programm mit einem Fehlercode zu beenden.</td>
+      </tr>
+      <tr>
+        <td>def main():</td>
+        <td> Hier wird eine <span data-tooltip="Functions sind wie Mini-Programme. Sie sind innerhalb eines Programmes und können u.a. mit Argumenten gerufen werde, was dafür sorg, dass sie ausgeführt werden. Sie sind wichtig um die Lesbarkeit zu verbessern und um Wiederholungen zu vermeiden."><u>Function</u></span> deklariert. Functions folgen dem selben Prinzip wie If Statements, mit einem Doppelpunkt und 4 Leerzeichen einschub.</td>
+      </tr>
+      <tr>
+        <td>sys.exit(0)</td>
+        <td> Eine Funktion der sys Libary. Schließt das Programm mit Fehlercode 0</td>
+      </tr>
+      <tr>
+        <td>def verification():</td>
+        <td>Zweite Funktion wird deklariert.</td>
+      </tr>
+      <tr>
+        <td>ans = input("Möchten sie fortfahren? Ja/Nein: ")</td>
+        <td>Kreiert eine Variabel ans mit Inhalt der Antwort auf die in input() gestellte Frage.</td>
+      </tr>
+      <tr>
+        <td>if ans == "Ja" or ans == "ja":
+                main()
+        </td>
+        <td>Sollte die Antwort auf input() Ja oder ja lauten wird der eingeschobene Teil ausgeführt <!--Mir ist  übrigens klar, dass ich dafür eine list mitt optionen nutzen sollte, dass ist aber für dieses Besipiel unnötig--></td>
+        </tr>
+        <td>
+        elif ans == "Nein" or ans == "nein":<br>
+            print("Programm wird abgebrochen.")<br>
+            sys.exit(1)
+        </td>
+        <td>Sollte ans nicht Ja/ja, dafür aber Nein oder nein beinhalten wird eine Fehlernachricht gedruckt und das Programm mit Fehlercode 1 beendet</td>
+      </tr>
+      <tr>
+        <td>
+            else:
+                verification()
+        </td>
+        <td>Sollte ans weder Ja/ja/Nein oder nein sein, so wird der Vorgang von vorne wiederholt.</td><!--Recursion muss man nicht erklären, oder-->
+      </tr>
+  </table>
+</div>
+    </div>
+    </body>
+    </html>

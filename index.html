@@ -18,7 +18,7 @@
           <a class="nav-link" href="data.html">Datentypen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">If/Else statemants or smth ikd</a>
+          <a class="nav-link" href="elif.html">If/Else statemants or smth ikd</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Loops</a>
@@ -29,39 +29,33 @@
       </ul>
     </nav>
     </div>
-    <div id="main"> <!-- hier kommt alles text rein -->
-      <h1 class=" mid p-2 text-center px-3 text-wrap container-fluid text-break">Python</h1>
-      <div id="intro" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    <div id="main" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2"> <!-- hier kommt alles text rein -->
+      <h1>Python</h1>
         Python ist eine <span data-tooltip="Objektorientierte Programmierung (OOP) ist ein Modell der Programmiersprachen bei welcher ein Objekt die Möglichkeit hat eine Funktion zu haben."><u>objektorientierte</u></span>,
            <span data-tooltip="Der Code wird Zeile für Zeile hintereinander ausgeführt."><u>interpretierte</u></span> Programmiersprache.
-           Phillipp, schreib hier villeich einfach mal ein wenig shit rein wie Erfindungsdatum oder so
-        
-      </div>
-      <div id="header">
-      <h2 class="px-3 mid">1. print()</h2>
-        </div>
-        <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+      <h2>1. print()</h2>
+
+        <div id="erklaerung">
           Print (zu deutsch: Drucken) gibt einen druckt einen Text oder eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> in der jeweiligen Konsole, die den Python-Script ausführt.<br>
           Beispiel:
         </div>
-      <div id="code" class="mid text-center px-3 text-wrap container-fluid text-break">
+      <div id="code">
       print("Hello, World")
       </div>
       <br>
-      <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
-        >>> Hello, World
+      <pre id="output">
+>>> Hello, World
       </pre>
-    </div>
-    <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    <div id="erklaerung">
       Um eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> zu Drucken muss jene erst deklariert werden.
     </div>
-    <div id="code" class="mid px-3 container-fluid">
+    <div id="code">
       integer = 5<br>
       string = "Hello,"<br>
       irgendwas = 3<br>
       zeug = "World"
     </div> 
-    <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    <div id="erklaerung">
       Eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> kann in Python unter jeglichem Namen und mit jeglichem
        <span data-tooltip="Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Mehr dazu bei Datentypen"><u>Datentyp</u></span> deklariert werden. 
        Die einfachsten sind Strings und Integers. Strings können eine Anreihung an Zeichen, bspw. einen Satz oder ein Wort speichern und Integer normalerweise eine ganze, reele Zahl.
@@ -69,44 +63,55 @@
       <span data-tooltip="Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Mehr dazu bei Datentypen"><u>Datentyp</u></span>
        nicht als Argument verlangt kann jede <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> mit jeglicher (reelen) Zahl oder anderer Daten Form vershen werden.  
       </div>
-      <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+      <br>
+      Auch ist es möglich den Nutzer den Wert aussuchen zu lassen:
+      <pre id="code">
+name = input("Name: ")
+      </pre>
+      <pre id="output">
+>>> Name: 
+      </pre>
+      <div id="erklaerung">
+        Hierbei wird Name als ein String gewertet und erhält den vom Nutzer gegebenen Wert. Um einen Integer zu erhalten kann man jene Name zu einem Integer umwandeln durch die int() funktion, was erlaubt mit Name mathematische Berechnungen zu machen.
+      </div>
+      <pre id="code">
+name = int(input("Name: "))
+      </pre>
         Weiterhin können alle <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> mit print gedruckt werden
-      </div> 
-        <pre id="code" class="mid px-3 container-fluid">
+        <pre id="code">
 print(irgendwas)</pre>
         <br>
-        <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
-          >>> Hello, World
+        <pre id="output">
+>>> Hello, World
         </pre>
-        <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+        <div id="erklaerung">
           Print nimmt verschiedene Argumente. Entweder eines in Gänsefüßchen, wo print jenes Zeichen für Zeichen druckt, oder ohne Gänsefüßchen, wo,
            sollte diese <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> deklariert sein, jene Gedruckt wird.
           <br>
           Auch beides Gleichzeitig ist möglich.
           </div>
-          <pre id="code" class="mid px-3 container-fluid">
+          <pre id="code">
 print(f"Hello, " + zeug)</pre>
             <br>
-          <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+          <pre id="output">
 >>> Hello, World
           </pre>
           <br>
-          <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+          <div id="erklaerung">
             Hier sagt das <b>f</b> direkt hinter der Klammer das der Inhalt formatiert werden soll, das Plus bindet den zweiten String an den ersten.
             <br>
             Oder um innerhalb der Gänsefüßchen <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span>n einzufügen: 
             </div>
-            <pre id="code" class="mid px-3 container-fluid">
+            <pre id="code">
 print(f"Hello, {zeug}")</pre>
 <br>
-<pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+<pre id="output">
   >>> Hello, World
             </pre>
-            <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+            <div id="erklaerung">
               Innerhalb der Geschwungenen Klammern können dann <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span>n eingefügt werden  
             </div>
       </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
