@@ -1,4 +1,4 @@
-#code{
+/* #code{
     background-color: #eeeeee !important;
     color:#c63678;
     border-radius: 0.5rem;
@@ -11,7 +11,33 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
   display: flex;
+} */
+ 
+#main {
+  background-color: #1e1e2e; /* Deep Charcoal */
+  color: #cdd6f4; /* Light Text */
 }
+
+/* Navbar */
+nav {
+  background-color: #181825; /* Dark Charcoal */
+  color: #cdd6f4; /* Light Text */
+}
+
+/* Code Box */
+#code {
+  background-color: #313244; /* Dark Gray */
+  color: #f38ba8; /* Python Code Keywords */
+  border: 1px solid #45475a; /* Subtle Border */
+}
+
+/* Output Box */
+#output {
+  background-color: #45475a; /* Slightly Lighter Gray */
+  color: #a6e3a1; /* Green for Output */
+  border: 1px solid #585b70; /* Subtle Border */
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .projectfont {
     font-family: "Nunito Sans", sans-serif;

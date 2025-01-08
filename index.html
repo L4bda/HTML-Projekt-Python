@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <link rel="icon" href="Python-logo-notext.svg"><!--Von https://de.m.wikipedia.org/wiki/Datei:Python_logo_and_wordmark.svg Lizens: GNU GPL--></html>
+    <link rel="icon" href="Python-logo-notext.svg"><!--Von https://de.m.wikipedia.org/wiki/Datei:Python_logo_and_wordmark.svg Lizens: GNU GPL-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Python</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"><!--von Bootstrap documentation-->
     <link href="python_css.css" rel="stylesheet">
   </head>
   <body class="projectfont pb-5">
@@ -21,18 +21,15 @@
           <a class="nav-link" href="elif.html">If/Else statemants or smth ikd</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Loops</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">No clue</a> 
-        </li>      
+          <a class="nav-link" href="loops.html">Loops</a>
+        </li>    
       </ul>
     </nav>
     </div>
     <div id="main" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2"> <!-- hier kommt alles text rein -->
       <h1>Python</h1>
         Python ist eine <span data-tooltip="Objektorientierte Programmierung (OOP) ist ein Modell der Programmiersprachen bei welcher ein Objekt die Möglichkeit hat eine Funktion zu haben."><u>objektorientierte</u></span>,
-           <span data-tooltip="Der Code wird Zeile für Zeile hintereinander ausgeführt."><u>interpretierte</u></span> Programmiersprache.
+           <span data-tooltip="Der Code wird Zeile für Zeile hintereinander ausgeführt."><u>interpretierte</u></span> Programmiersprache. Python scripts können dadurch ausgeführt werden, in einem Terminal Emulator erst python , dann den namen des Files mit Endung .py und, falls benötigt, weitere Argumente anzugeben. Daraufhin ließt der Python Interpreter jede Zeile von oben nach unten und führt jene aus. 
       <h2>1. print()</h2>
 
         <div id="erklaerung">
@@ -47,7 +44,7 @@
 >>> Hello, World
       </pre>
     <div id="erklaerung">
-      Um eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> zu Drucken muss jene erst deklariert werden.
+      Um eine Variabel zu Drucken muss jene erst deklariert werden.
     </div>
     <div id="code">
       integer = 5<br>
@@ -56,12 +53,11 @@
       zeug = "World"
     </div> 
     <div id="erklaerung">
-      Eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> kann in Python unter jeglichem Namen und mit jeglichem
+      Eine Variabel kann in Python unter jeglichem Namen und mit jeglichem
        <span data-tooltip="Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Mehr dazu bei Datentypen"><u>Datentyp</u></span> deklariert werden. 
-       Die einfachsten sind Strings und Integers. Strings können eine Anreihung an Zeichen, bspw. einen Satz oder ein Wort speichern und Integer normalerweise eine ganze, reele Zahl.
-      Da Python jedoch, anders als viele andere Sprachen, den 
-      <span data-tooltip="Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Mehr dazu bei Datentypen"><u>Datentyp</u></span>
-       nicht als Argument verlangt kann jede <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> mit jeglicher (reelen) Zahl oder anderer Daten Form vershen werden.  
+       Die einfachsten sind Strings und Integers. Strings können eine Anreihung an Zeichen, bspw. einen Satz oder ein Wort speichern und Integer normalerweise eine ganze, natürliche Zahl.<!--Ja ja da python ram automatisch allocated ist diese differnzierung hier fett unötig und das Strings ein einzelner Buchstabe sein kann ist das genaue Gegenteil eines strings. Ist so oder so nicht wichtig-->
+      Da Python jedoch, anders als viele andere Sprachen, den Datentyp
+       nicht als Argument verlangt kann jede Variabel mit jeglicher (reelen) Zahl oder anderer Daten Form vershen werden.  
       </div>
       <br>
       Auch ist es möglich den Nutzer den Wert aussuchen zu lassen:
@@ -69,15 +65,15 @@
 name = input("Name: ")
       </pre>
       <pre id="output">
->>> Name: 
+>>> Name: <!-- Das hier ist natürlich alles ein wenig doof, aber da ich ohne JavaScript oder flask keine interaktiven sachen bauen kann wird das net besser.-->
       </pre>
       <div id="erklaerung">
-        Hierbei wird Name als ein String gewertet und erhält den vom Nutzer gegebenen Wert. Um einen Integer zu erhalten kann man jene Name zu einem Integer umwandeln durch die int() funktion, was erlaubt mit Name mathematische Berechnungen zu machen.
+        Hierbei wird Name als ein String gewertet und erhält den vom Nutzer gegebenen Wert. Um einen Integer zu erhalten kann man jene Name zu einem Integer umwandeln durch die int() funktion, was erlaubt mit der Variabel Name mathematische Berechnungen zu machen.
       </div>
       <pre id="code">
 name = int(input("Name: "))
       </pre>
-        Weiterhin können alle <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> mit print gedruckt werden
+        Weiterhin können alle Variabel mit print gedruckt werden
         <pre id="code">
 print(irgendwas)</pre>
         <br>
@@ -86,7 +82,7 @@ print(irgendwas)</pre>
         </pre>
         <div id="erklaerung">
           Print nimmt verschiedene Argumente. Entweder eines in Gänsefüßchen, wo print jenes Zeichen für Zeichen druckt, oder ohne Gänsefüßchen, wo,
-           sollte diese <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> deklariert sein, jene Gedruckt wird.
+           sollte diese Variabel deklariert sein, jene Gedruckt wird.
           <br>
           Auch beides Gleichzeitig ist möglich.
           </div>
@@ -100,7 +96,7 @@ print(f"Hello, " + zeug)</pre>
           <div id="erklaerung">
             Hier sagt das <b>f</b> direkt hinter der Klammer das der Inhalt formatiert werden soll, das Plus bindet den zweiten String an den ersten.
             <br>
-            Oder um innerhalb der Gänsefüßchen <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span>n einzufügen: 
+            Oder um innerhalb der Gänsefüßchen Variabeln einzufügen: 
             </div>
             <pre id="code">
 print(f"Hello, {zeug}")</pre>
@@ -109,7 +105,7 @@ print(f"Hello, {zeug}")</pre>
   >>> Hello, World
             </pre>
             <div id="erklaerung">
-              Innerhalb der Geschwungenen Klammern können dann <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span>n eingefügt werden  
+              Innerhalb der Geschwungenen Klammern können dann Variabeln eingefügt werden  
             </div>
       </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
