@@ -1,0 +1,15 @@
+Thema: Python Intro / Grundkurs
+Umfang :
+@L4bda ➜ /workspaces/HTML-Projekt-Python (main) $ tree
+├── python-logo-notext.svg
+├── data.html
+├── elif.html
+├── execute.html
+├── index.html <-- Start
+├── loops.html
+├── python_css.css
+├── run.png
+└── testing.py
+Verlauf des Projektes: Keine Ahnung was das heißen soll. Haben Themen gesammelt und Zeug dazu geschrieben.
+Beachtenswertes: CSS & Bootstrap, Text, Große Menge an HTML-Tags.
+Mitglieder: Phillip Schmauder(phillip.schmauder@gmail.com), Hugo Döring(hhj.doering@gmail.com)

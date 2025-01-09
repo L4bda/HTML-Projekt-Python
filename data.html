@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
   <head>
     <link rel="icon" href="Python-logo-notext.svg"><!--Von https://de.m.wikipedia.org/wiki/Datei:Python_logo_and_wordmark.svg Lizens: GNU GPL-->
     <meta charset="utf-8">
@@ -31,7 +31,7 @@
     <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
         <h1 class="text-center">Datentypen</h1>
         <div id="erklaerung" class="text-center">Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. 
-        Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Da Python, anders als bspw. C, Memorymanagment selbstständig übernimmt fallen jedoch einige davon weg.
+        Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Da Python, anders als bspw. C, Memory-Managment selbstständig übernimmt fallen jedoch einige davon weg.
         </div><br>
         <table class="table"><!-- Das hat überhaupt nicht geklappt, deshalb halt bootstrap hier-->
             <thead>
@@ -58,14 +58,13 @@
           </table>
           <br>
     <div id="erklaerung">
-      Python bietet dazu noch weitere komplexere Datentypen an. Jene heißen <b>Sets, Dictionaries, Tuples und Lists.</b>
+      Python bietet dazu noch weitere komplexere Arraytypen an. Jene heißen <b>Sets, Dictionaries, Tuples und Lists.</b>
       <br>
-      <h2>Lists:</h2> Lists erlauben es mehrere Daten in einer Variabel unterzubringen. Eine List ist sortiebrbar, veränderbar und erlaubt sowohl duplikate als auch unterschiedliche Datentypen.
+      <h2>Lists:</h2> Lists erlauben es mehrere Daten in einer Variabel unterzubringen. Eine List ist sortiebbar, veränderbar und erlaubt sowohl Duplikate als auch unterschiedliche Datentypen.
       </div>
       <pre id="code">
         <code>
-        
-Liste = ["Wort", "True", 1, 2, "a"]
+Liste = ["Wort", True, 1, 2, "a"]
 print(f"Die ganze Liste: {Liste}") <b id="c">#Auch einzelne objekte einer Liste können ausgewählt werden</b>
 print(f"Element 1 der Liste:{Liste[1]}")
 </code>
@@ -76,7 +75,7 @@ print(f"Element 1 der Liste:{Liste[1]}")
    True
    </pre>
    <div id="erklaerung">
-    Überraschenderweise wird hier True gedruckt anstatt vomn Hi. Das Geschiet, da in fast allen Programmiersprachen bei 0 angefangen zu zählen. Daher müsste man um das Objekt (Hi) zu finden Liste[0] nutzen.
+    Überraschenderweise wird hier True gedruckt anstatt von Hi. Das geschieht, da in allen Programmiersprachen bei 0 angefangen wird zu zählen. Daher müsste man um das Objekt Hi zu finden Liste[0] nutzen.
     Weiterhin können Listen sortiert werden. Python ermöglicht das überaus einfach durch eingebaute funktionen.
     </div>
     <pre id="code">
@@ -112,9 +111,9 @@ print(f"Die selbe Liste sortiert: {flugzeugmarken})
 
       </pre>
    <div id="erklaerung">
-    Viele andere Programmiersprachen zwingen die Benutzer solche funktionen selbständig zu bauen. Deshalb wird Python oft als sehr einfach eingestuft.
+    Viele andere Programmiersprachen zwingen die Benutzer solche funktionen selbständig zu bauen. Unter anderem deshalb wird Python oft als sehr einfach eingestuft.
     <br>
-    <h2>Sets:</h2>Sets sind ähnlich zu Lists. Der unterschied ist, dass sie absoulute unverbunden sind. Sie sind einer <span data-tooltip="Linked Lists sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des Nächsten Elementes enthält. Jene sind besser für memory managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory hintereinander verbunden sind."><u>linked List</u></span> ähnlich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
+    <h2>Sets:</h2>Sets sind ähnlich zu Lists. Der unterschied ist, dass sie absoulut unverbunden sind. Sie sind einer <span data-tooltip="Linked Lists sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des nächsten Elementes enthält. Jene sind besser für Memory-Managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory hintereinander verbunden sind."><u>linked List</u></span> ähnlich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als Duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
     </div>
     <pre id="code">
       <code>
@@ -157,12 +156,14 @@ Traceback (most recent call last):
 TypeError: 'set' object is not subscriptable
     </pre>
 </div>
-    
+    <br>
   <div id="erklaerung">
-Hier haben wir auch unseren ersten Fehler. Da Python eine interpretierte Programmiersprache ist geht ist eine Linie nach der anderen runter und stopt erst mit Ende des Programmes oder bei einem Fehler. Traceback heißt soviel wie: Hier liefs erstmal schief. Danach zeigt es wo sich die Datei befindet, in welcher Zeile der fehler ist und wo genau. Zum schluss gibt es einen Fehlertyp mit Erklärung.
-Es gibt trotzdem Möglichkeiten einzelne Objekte zu finden, jene werden aber erst in Loops besprochen.
-Um zu schauen ob ein Objekt existiert jedoch gibt es volgende einfache Lösung.
+Hier haben wir auch unseren ersten Fehler. Da Python eine interpretierte Programmiersprache ist geht der Interpreter eine Zeile nach der anderen runter und stopt erst mit Ende des Programmes oder bei einem Fehler. Traceback heißt soviel wie: Hier liefs erstmal schief. Danach zeigt es wo sich die Datei befindet, in welcher Zeile der Fehler ist und wo genau. Zum schluss gibt es einen Fehlertyp mit Erklärung.
+Es gibt trotzdem Möglichkeiten einzelne Objekte zu finden.
+Um zu schauen ob ein Objekt existiert bspw. gibt es folgende einfache Lösung.
+
 </div>
+<br>
 <pre id="code">
   <code>
 set1 = {"Auto", "Flugzeug", "Zug", "Auto"}
@@ -191,7 +192,7 @@ dict = {
     "kurse:": ["Italienisch", "Informatik", "Kunst"]
 }
   
-print(f"Vollea Dictionary: {dict}")
+print(f"Volles Dictionary: {dict}")
 print(f"Nur ein Key-Value Pair: {dict["name"]}") 
 </pre>
 <br>
@@ -200,9 +201,10 @@ Volles Dictionary: {'name': 'Hugo', 'schule': 'HvGG', 'klasse': 'Ec', 'kurse:': 
 Nur ein Key-Value Pair: Hugo
 </pre>
 <div id="erklaerung">
-  Auch Dictionaries sind vielseitig einsetzbar. Beispielsweise für <span data-tooltip="Hashmaps ordnen einem Hash(einer einem Wort zugeordneter Folge von Zeichen, welche sowohl auf eine maximale Länge gekappt sind, als auch für das selbe Wort jedesmal den selben Hash, also die selbe Zeichenfolge ausgeben.) einen Wert zu. Jene sind hilfreich um Arbeitspeichernutzung zu veringern und Nachschlagen schneller zu machen. Benutzt bspw. in Wörterbüchern. (Auch eine unfassbare scheiße solche zu implementieren.)"><u>Hashmaps</u></span>, Datenbanken und ähnlichem. Wichtig: wie bei allen genannten Datentypen muss jedes Element durch ein Komma seperiert werden. Auch Dictionaries<br>
+  Auch Dictionaries sind vielseitig einsetzbar. Beispielsweise für <span data-tooltip="Hashmaps ordnen einem Hash(einer einem Wort zugeordneter Folge von Zeichen, welche sowohl auf eine maximale Länge gekappt sind, als auch für das selbe Wort jedesmal den selben Hash, also die selbe Zeichenfolge ausgeben.) einen Wert zu. Jene sind hilfreich um Arbeitspeichernutzung zu veringern und Nachschlagen schneller zu machen. Benutzt bspw. in Wörterbüchern. (Auch eine unfassbare ******* solche zu implementieren.)"><u>Hashmaps</u></span>, Datenbanken und ähnlichem. Wichtig: wie bei allen genannten Datentypen muss jedes Element durch ein Komma seperiert werden.
+  <br>
   <h2>Tuples & len():</h2>
-  Tuples sind auch sehr ähnlich zu Lists. Der unterschied ist, dass sie nicht verändert werden können. In allen anderen Funktionen sind sie gleich zu Lists. Daher ist kein Beispiel notwendig
+  Tuples sind auch sehr ähnlich zu Lists. Der unterschied ist, dass sie nicht verändert werden können. In allen anderen Funktionen sind sie gleich zu Lists. Daher ist kein Beispiel notwendig.
   Um jedoch die Länge eines jeglichen Datentyps zu finden hat Python eine eingebaute funktion genannt len().
 </div>
 <pre id="code">
