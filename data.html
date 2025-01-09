@@ -9,7 +9,7 @@
     <link href="python_css.css" rel="stylesheet">
   </head>
   <body class="projectfont pb-5">
-    <nav class="bg-info-subtle navbar navbar-expand-sm navbar-nav bg-purple"> <!-- zum zentrieren hier navbar-nav als class haben sonst navbar-nav entfernen damit es von links beginnt-->
+    <nav class="navbar navbar-expand-sm navbar-nav"> <!-- zum zentrieren hier navbar-nav als class haben sonst navbar-nav entfernen damit es von links beginnt-->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Intro</a>
@@ -18,7 +18,7 @@
           <a class="nav-link" href="data.html">Datentypen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="elif.html">If/Else statemants or smth ikd</a>
+          <a class="nav-link" href="elif.html">If/Else statemants, Libraries and Functions</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
@@ -63,7 +63,7 @@
 Liste = ["Wort", "True", 1, 2, "a"]
 print(f"Die ganze Liste: {Liste}")
 
-#Auch einzelne objekte einer Liste können ausgewählt werden
+<span id="c">#Auch einzelne objekte einer Liste können ausgewählt werden</span>
 
 print(f"Element 1 der Liste:{Liste[1]}")
       </pre>
@@ -80,17 +80,17 @@ print(f"Element 1 der Liste:{Liste[1]}")
 Liste = [8, 4, 2, 9, 1, 5, 6, 7, 3, 0]
 print(f"Die normale Liste: {Liste}")
       
-#Python hat eigene Funktionen zur sortierung von Listen
+<span id="c">#Python hat eigene Funktionen zur sortierung von Listen</span>
       
 Liste.sort()
 print(f"Die sortierte Liste: {Liste}")
       
-#Oder andersrum:
+<span id="c">#Oder andersrum:</span>
       
 Liste.sort(reverse=True)
 print(f"Die sortierte Liste von oben nach unten: {Liste}")
       
-#Oder Alphabetisch:
+<span id="c">#Oder Alphabetisch:</span>
 
 flugzeugmarken = ["Boeing", "Airbus", "General Dynamics", "Lockhead Martin", "BAE Systems", "Eurofighter Jagdflugzeug GMBH"]
 print(f"Eine Liste mit Namen von Flugzeugherstellern: {flugzeugmarken}") <!--Grüße an Dansh btw.-->
@@ -112,7 +112,7 @@ print(f"Die selbe Liste sortiert: {flugzeugmarken})
     <h2>Sets:</h2>Sets sind ähnlich zu Lists. Der unterschied ist, dass sie absoulute unverbunden sind. Sie sind einer <span data-tooltip="Linked List   s sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des Nächsten Elementes enthält. Jene sind besser für memory managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory hintereinander verbunden sind."><u>linked List   </u></span> ähnlich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
     </div>
     <pre id="code" class="mid px-3 container-fluid">
-set1 = {"Auto", "Flugzeug", "Zug", "Auto"} # Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden
+set1 = {"Auto", "Flugzeug", "Zug", "Auto"} <span id="c"># Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden</span>
 
 print(set1)
     </pre>
@@ -157,9 +157,9 @@ Um zu schauen ob ein Objekt existiert jedoch gibt es volgende einfache Lösung.
 </div>
 <pre id="code" class="mid px-3 container-fluid">
 set1 = {"Auto", "Flugzeug", "Zug", "Auto"}
-#Befindet sich Auto in diesem Set?
+<span id="c">#Befindet sich Auto in diesem Set?</span>
 print("Auto" in set1) 
-#Befindet sich Boot in diesem Set?
+<span id="c">#Befindet sich Boot in diesem Set?</span>
 imset = "Boot" # Nur um zu zeigen, dass es auch mit Variabeln funktioniert
 print(imset in set1)
 </pre>

@@ -9,7 +9,7 @@
     <link href="python_css.css" rel="stylesheet">
   </head>
   <body class="projectfont pb-5">
-    <nav class="bg-info-subtle navbar navbar-expand-sm navbar-nav"> <!-- zum zentrieren hier navbar-nav als class haben sonst navbar-nav entfernen damit es von links beginnt-->
+    <nav class="navbar navbar-expand-sm navbar-nav"> <!-- zum zentrieren hier navbar-nav als class haben sonst navbar-nav entfernen damit es von links beginnt-->
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Intro</a>
@@ -18,7 +18,7 @@
           <a class="nav-link" href="data.html">Datentypen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="eli.html">If/Else statemants, Libraries and Functions</a>
+          <a class="nav-link" href="elif.html">If/Else statemants, Libraries and Functions</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
@@ -53,13 +53,13 @@ while(i &lt;= 5):
 </div>
 <pre id="code">
 while(True):
-  #Rest des Codes
+<span id="c">#Rest des Codes</span>
 
-#Oder:
+<span id="c">#Oder:</span>
 
 x = True
 while(x):
-  #Rest des Codes
+<span id="c">#Rest des Codes</span>
 </pre>
 <div id="erklaerung">
 <h2>for Loops:</h2> 
@@ -84,7 +84,7 @@ for wörter in lied:
   Jene Funktion heißt range. range nimmt ein minimum von zwei Argumenten. Einen optionalen Startwert, der sollte er nicht vorhanden sein durch 0 ersetzt wird und einen notwendigen Endwert. 
 </div>
 <pre id="code">
-x = list(range(0, 10)) #Zur demonstration: Nutzt die list() Funktion und die range() Funktion um eine Liste mit 10 Zahlen von 0 aus zu kreieren.
+x = list(range(0, 10)) <span id="c">#Zur demonstration: Nutzt die list() Funktion und die range() Funktion um eine Liste mit 10 Zahlen von 0 aus zu kreieren.</span>
 print(x)
 </pre>
 <pre id="output">
@@ -93,8 +93,8 @@ print(x)
 In einem for Loop:
 <pre id="code">
 lied = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"]
-for i in range(len(lied)): #len(lied) wird hier anstatt von einem Int verwendet um keinen Fehler zu verursachen,
-  print(i, lied[i])        # könnte aber auch durch 7 ersetzt werden
+for i in range(len(lied)): <span id="c">#len(lied) wird hier anstatt von einem Int verwendet um keinen Fehler zu verursachen,</span>
+  print(i, lied[i])        <span id="c"># könnte aber auch durch 7 ersetzt werden</span>
 </pre>
 <pre id="output">
 >>> 0 Alle
