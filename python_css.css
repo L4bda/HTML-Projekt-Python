@@ -21,6 +21,7 @@ nav-item {
   display: flex;
   font-family: 'Courier New', monospace;
   border: 1px solid #81a1c1;
+  white-space: pre;
 }
 
 #output {
@@ -32,12 +33,10 @@ nav-item {
   font-family: 'Courier New', monospace;
   border: 1px solid #81a1c1; 
 }
-#c {
+#c { /*Ich hasse das auf einem unfassbaren Level aber es ist das beste was ich hinbekomme weil <span> ganz seltsame formatierungsfehler hat zumindest in pre */
   color:#a3be8c;
 }
-table tr th tbody td{
-  background-color: #4c566a;
-}
+
 
 /* Colorscheme ist Nord von https://www.nordtheme.com/ */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
@@ -53,6 +52,16 @@ table tr th tbody td{
   .mid{
     margin: 0 auto;
     width: 80%;
+  }
+  .tisch {
+    padding: 15px;
+    background-color: #4c566a;
+    color: #eceff4;
+    border-collapse: collapse;
+    border: 1px solid;
+  }
+  .imgage {
+    border: #eceff4 1px solid;
   }
 
   /* from https://stackoverflow.com/questions/7503183/what-is-the-easiest-way-to-create-an-html-mouseover-tool-tip */

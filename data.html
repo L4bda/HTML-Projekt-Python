@@ -23,82 +23,87 @@
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
         </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="execute.html">Ausführen eines Python Scripts</a>
+          </li>
       </ul>
     </nav>
-    <div id="main" class="mid p-2 text-center px-3 text-wrap container-fluid text-break">
-        <h1 class="mid p-2 text-center px-3 text-wrap container-fluid text-break">Datentypen</h1>
-        <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. 
+    <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
+        <h1 class="text-center">Datentypen</h1>
+        <div id="erklaerung" class="text-center">Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. 
         Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Da Python, anders als bspw. C, Memorymanagment selbstständig übernimmt fallen jedoch einige davon weg.
-        </div>
-        <table class="table"> <!--https://getbootstrap.com/docs/4.0/content/tables/-->
+        </div><br>
+        <table class="table"><!-- Das hat überhaupt nicht geklappt, deshalb halt bootstrap hier-->
             <thead>
               <tr>
-                <th scope="col"></th>
-                <th scope="col">Boolean</th>
-                <th scope="col">Integer</th>
-                <th scope="col">String</th>
+                <th></th>
+                <th>Boolean</th>
+                <th>Integer</th>
+                <th>String</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">Inputdata</th>
+                <th>Inputdata</th>
                 <td>True/False</td>
                 <td>&reals;</td>
                 <td>Jegliche Zeichen</td>
               </tr>
               <tr>
-                <th scope="row">Verfügabre Operationen</th>
+                <th>Verfügabre Operationen</th>
                 <td>if(boolean), print</td>
                 <td>+ , - , / , % , *, print</td>
                 <td>print</td>
               </tr>
           </table>
-    </div>
-    <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+          <br>
+    <div id="erklaerung">
       Python bietet dazu noch weitere komplexere Datentypen an. Jene heißen <b>Sets, Dictionaries, Tuples und Lists.</b>
       <br>
       <h2>Lists:</h2> Lists erlauben es mehrere Daten in einer Variabel unterzubringen. Eine List ist sortiebrbar, veränderbar und erlaubt sowohl duplikate als auch unterschiedliche Datentypen.
       </div>
-      <pre id="code" class="mid px-3 container-fluid">
+      <pre id="code">
+        <code>
+        
 Liste = ["Wort", "True", 1, 2, "a"]
-print(f"Die ganze Liste: {Liste}")
-
-<span id="c">#Auch einzelne objekte einer Liste können ausgewählt werden</span>
-
+print(f"Die ganze Liste: {Liste}") <b id="c">#Auch einzelne objekte einer Liste können ausgewählt werden</b>
 print(f"Element 1 der Liste:{Liste[1]}")
+</code>
       </pre>
       <br>
-      <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+      <pre id="output">
 >>> ['Hi', True, 1, 2, 'a']
    True
    </pre>
-   <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+   <div id="erklaerung">
     Überraschenderweise wird hier True gedruckt anstatt vomn Hi. Das Geschiet, da in fast allen Programmiersprachen bei 0 angefangen zu zählen. Daher müsste man um das Objekt (Hi) zu finden Liste[0] nutzen.
     Weiterhin können Listen sortiert werden. Python ermöglicht das überaus einfach durch eingebaute funktionen.
     </div>
-    <pre id="code" class="mid px-3 container-fluid">
+    <pre id="code">
+      <code>
 Liste = [8, 4, 2, 9, 1, 5, 6, 7, 3, 0]
 print(f"Die normale Liste: {Liste}")
       
-<span id="c">#Python hat eigene Funktionen zur sortierung von Listen</span>
+ <b id="c">#Python hat eigene Funktionen zur sortierung von Listen</b>
       
 Liste.sort()
-print(f"Die sortierte Liste: {Liste}")
-      
-<span id="c">#Oder andersrum:</span>
-      
+print(f"Die sortierte Liste: {Liste}") 
+
+ <b id="c">#Oder andersrum:</b>
+ 
 Liste.sort(reverse=True)
 print(f"Die sortierte Liste von oben nach unten: {Liste}")
       
-<span id="c">#Oder Alphabetisch:</span>
+ <b id="c">#Oder Alphabetisch:</b>
 
 flugzeugmarken = ["Boeing", "Airbus", "General Dynamics", "Lockhead Martin", "BAE Systems", "Eurofighter Jagdflugzeug GMBH"]
-print(f"Eine Liste mit Namen von Flugzeugherstellern: {flugzeugmarken}") <!--Grüße an Dansh btw.-->
+print(f"Eine Liste mit Namen von Flugzeugherstellern: {flugzeugmarken}") <!--Grüße an Danish btw.-->
 flugzeugmarken.sort()
 print(f"Die selbe Liste sortiert: {flugzeugmarken})
       </pre>
+    </code>
       <br>
-      <pre id="output" class="mid px-3 text-wrap container-fluid text-break">
+      <pre id="output">
 >>> Die normale Liste: [8, 4, 2, 9, 1, 5, 6, 7, 3, 0]<br>
 >>> Die sortierte Liste: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>
 >>> Die sortierte Liste von oben nach unten: [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]<br>
@@ -106,41 +111,44 @@ print(f"Die selbe Liste sortiert: {flugzeugmarken})
 >>> Die selbe Liste sortiert: ['Airbus', 'BAE Systems', 'Boeing', 'Eurofighter Jagdflugzeug GMBH', 'General Dynamics', 'Lockhead Martin']<br>
 
       </pre>
-   <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+   <div id="erklaerung">
     Viele andere Programmiersprachen zwingen die Benutzer solche funktionen selbständig zu bauen. Deshalb wird Python oft als sehr einfach eingestuft.
     <br>
-    <h2>Sets:</h2>Sets sind ähnlich zu Lists. Der unterschied ist, dass sie absoulute unverbunden sind. Sie sind einer <span data-tooltip="Linked List   s sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des Nächsten Elementes enthält. Jene sind besser für memory managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory hintereinander verbunden sind."><u>linked List   </u></span> ähnlich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
+    <h2>Sets:</h2>Sets sind ähnlich zu Lists. Der unterschied ist, dass sie absoulute unverbunden sind. Sie sind einer <span data-tooltip="Linked Lists sind Datenstrukturen wo jegliches Element sowohl seinen Wert als auch die Position des Nächsten Elementes enthält. Jene sind besser für memory managment und einfügen von weiteren Elementen an einem späteren Zeitpunkt, da sie nicht in Memory hintereinander verbunden sind."><u>linked List</u></span> ähnlich, jedoch werden alle Duplikate ignoriert. True und 1, sowie False und 0 werden als duplikate angesehen.<!--Ich hab kein bock ram zu erklären. Das ist des lesers problem-->
     </div>
-    <pre id="code" class="mid px-3 container-fluid">
-set1 = {"Auto", "Flugzeug", "Zug", "Auto"} <span id="c"># Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden</span>
+    <pre id="code">
+      <code>
+set1 = {"Auto", "Flugzeug", "Zug", "Auto"}  <b id="c"># Zwei mal Auto hier, doch nur ein mal wird es gedruckt werden</b>
 
 print(set1)
+</code>
     </pre>
+
     <br>
-    <pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+    <pre id="output">
 >>> {'Zug', 'Flugzeug', 'Auto'}
-</pre>
+    </pre>
 <br>
-<div class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">Oder:</div>
-<pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+<div>Oder:</div>
+<pre id="output">
   >>> {'Flugzeug', 'Zug', 'Auto'}
   </pre>
 <br>
-<pre id="output" class="mid text-center px-3 text-wrap container-fluid text-break">
+<pre id="output">
   >>> {'Auto', 'Zug', 'Flugzeug'}
   </pre>
   <br>
-  <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+  <div id="erklaerung">
   und so weiter...
   Weiterhin ist es deshalb unmöglich ein spezifischel Element zu erhalten. Siehe hier:
   </div>   
-  <pre id="code" class="mid px-3 container-fluid">
+  <pre id="code">
 set1 = {"Auto", "Flugzeug", "Zug"}
 
 print(set1[0])
   </pre>
   <br>
-  <div id="output" class="mid px-3">
+  <div id="output">
     <pre>
 Traceback (most recent call last):
   File "/home/Lambda/Downloads/HTML-Projekt-Python-main/testing.py", line 3, in <module>
@@ -150,30 +158,32 @@ TypeError: 'set' object is not subscriptable
     </pre>
 </div>
     
-  <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+  <div id="erklaerung">
 Hier haben wir auch unseren ersten Fehler. Da Python eine interpretierte Programmiersprache ist geht ist eine Linie nach der anderen runter und stopt erst mit Ende des Programmes oder bei einem Fehler. Traceback heißt soviel wie: Hier liefs erstmal schief. Danach zeigt es wo sich die Datei befindet, in welcher Zeile der fehler ist und wo genau. Zum schluss gibt es einen Fehlertyp mit Erklärung.
 Es gibt trotzdem Möglichkeiten einzelne Objekte zu finden, jene werden aber erst in Loops besprochen.
 Um zu schauen ob ein Objekt existiert jedoch gibt es volgende einfache Lösung.
 </div>
-<pre id="code" class="mid px-3 container-fluid">
+<pre id="code">
+  <code>
 set1 = {"Auto", "Flugzeug", "Zug", "Auto"}
-<span id="c">#Befindet sich Auto in diesem Set?</span>
+ <b id="c">#Befindet sich Auto in diesem Set?</b>
 print("Auto" in set1) 
-<span id="c">#Befindet sich Boot in diesem Set?</span>
+ <b id="c">#Befindet sich Boot in diesem Set?</b>>
 imset = "Boot" # Nur um zu zeigen, dass es auch mit Variabeln funktioniert
 print(imset in set1)
 </pre>
+</code>
 <br>
-  <pre id="output" class="mid px-3">
+  <pre id="output">
 >>> True
 >>> False
     </pre>
-    <div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+    <div id="erklaerung">
       Sets sind schneller und in ihrer Art keine Duplikate zu besitzen oft einsetzbar und daher sehr nützlich.<br>
       <h2>Dictionaries:</h2>
       Dictionaries, anders als Lists oder Sets besthen aus zwei Daten pro Element. Einem sogennanten Key-Value Pair. Ein Key, welcher in einem Print Statement genutzt werden kann um das dazugehörige Value als Output zu bekommen. Beispielsweise könnte ein Key "Name" sein und sein Value "Hugo". Values dürfen Dupliziert werden, Keys nicht.
     </div>
-  <pre id="code" class="mid px-3 container-fluid">
+  <pre id="code">
 dict = {
     "name": "Hugo",
     "schule": "HvGG",
@@ -185,17 +195,17 @@ print(f"Vollea Dictionary: {dict}")
 print(f"Nur ein Key-Value Pair: {dict["name"]}") 
 </pre>
 <br>
-<pre id="output" class="mid px-3">
+<pre id="output">
 Volles Dictionary: {'name': 'Hugo', 'schule': 'HvGG', 'klasse': 'Ec', 'kurse:': ['Italienisch', 'Informatik', 'Kunst']}
 Nur ein Key-Value Pair: Hugo
 </pre>
-<div id="erklaerung" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2">
+<div id="erklaerung">
   Auch Dictionaries sind vielseitig einsetzbar. Beispielsweise für <span data-tooltip="Hashmaps ordnen einem Hash(einer einem Wort zugeordneter Folge von Zeichen, welche sowohl auf eine maximale Länge gekappt sind, als auch für das selbe Wort jedesmal den selben Hash, also die selbe Zeichenfolge ausgeben.) einen Wert zu. Jene sind hilfreich um Arbeitspeichernutzung zu veringern und Nachschlagen schneller zu machen. Benutzt bspw. in Wörterbüchern. (Auch eine unfassbare scheiße solche zu implementieren.)"><u>Hashmaps</u></span>, Datenbanken und ähnlichem. Wichtig: wie bei allen genannten Datentypen muss jedes Element durch ein Komma seperiert werden. Auch Dictionaries<br>
   <h2>Tuples & len():</h2>
   Tuples sind auch sehr ähnlich zu Lists. Der unterschied ist, dass sie nicht verändert werden können. In allen anderen Funktionen sind sie gleich zu Lists. Daher ist kein Beispiel notwendig
   Um jedoch die Länge eines jeglichen Datentyps zu finden hat Python eine eingebaute funktion genannt len().
 </div>
-<pre id="code" class="mid px-3 container-fluid">
+<pre id="code">
 tuple1 = ("Wort", "True", 1, 2, "a")
 Liste = ["Wort", "True", 1, 2, "a"]
 set1 = {"Auto", "Flugzeug", "Zug", "Auto"}
@@ -212,12 +222,13 @@ print(len(set1))
 print(len(dict))
 </pre>
 <br>
-<pre id="output" class="mid px-3">
+<pre id="output">
 >>> 5
 >>> 5
 >>> 3
 >>> 4
   </pre>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -23,13 +23,17 @@
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="execute.html">Ausführen eines Python Scripts</a>
+          </li>
       </ul>
     </nav>
     </div>
     <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
     <h2 class="text-center">Loops</h2>
-    <div id="erklaerung">
-     Es gibt zwei Arten von Loops in Python. for Loops und While Loops.<br>
+    <div id="erklaerung" class="text-center">
+     Es gibt zwei Arten von Loops in Python. for Loops und While Loops.<br></div>
+     <div id="erklaerung">
      <h2>While Loops:</h2>
      While-Loops wiederholen ihren Inhalt solange wie die in dem While Loop vorhandene Boolean True ist.
     </div>
@@ -52,14 +56,16 @@ while(i &lt;= 5):
     Um einen endlosen Loop herbeizuführen ist folgendes möglich:
 </div>
 <pre id="code">
+  <code>
 while(True):
-<span id="c">#Rest des Codes</span>
+<b id="c">#Rest des Codes</b>
 
-<span id="c">#Oder:</span>
+<b id="c">#Oder:</b>
 
 x = True
 while(x):
-<span id="c">#Rest des Codes</span>
+<b id="c">#Rest des Codes</b>
+</code>
 </pre>
 <div id="erklaerung">
 <h2>for Loops:</h2> 
@@ -84,17 +90,24 @@ for wörter in lied:
   Jene Funktion heißt range. range nimmt ein minimum von zwei Argumenten. Einen optionalen Startwert, der sollte er nicht vorhanden sein durch 0 ersetzt wird und einen notwendigen Endwert. 
 </div>
 <pre id="code">
-x = list(range(0, 10)) <span id="c">#Zur demonstration: Nutzt die list() Funktion und die range() Funktion um eine Liste mit 10 Zahlen von 0 aus zu kreieren.</span>
+  <code>
+x = list(range(0, 10)) <b id="c">#Zur demonstration: Nutzt die list() Funktion und die range() Funktion um eine Liste
+                        #mit 10 Zahlen von 0 aus zu kreieren.</b>
 print(x)
+</code>
 </pre>
 <pre id="output">
 >>> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 </pre>
 In einem for Loop:
 <pre id="code">
+  <code>
 lied = ["Alle", "meine", "Entchen", "schwimmen", "auf", "dem", "See"]
-for i in range(len(lied)): <span id="c">#len(lied) wird hier anstatt von einem Int verwendet um keinen Fehler zu verursachen,</span>
-  print(i, lied[i])        <span id="c"># könnte aber auch durch 7 ersetzt werden</span>
+for i in range(len(lied)): <b id="c">#len(lied) wird hier anstatt von einem Int</b> 
+                           <b id="c">#verwendet um keinen Fehler zu verursachen,</b>
+                           <b id="c">#könnte aber auch durch 7 ersetzt werden</b>
+print(i, lied[i])       
+</code>
 </pre>
 <pre id="output">
 >>> 0 Alle

@@ -22,15 +22,20 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
-        </li>   
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="execute.html">Ausführen eines Python Scripts</a>
+          </li> 
       </ul>
     </nav>
     </div>
     <div id="main" class="mid p-2 px-3 text-wrap container-fluid text-break">
 <h2 class="text-center">If-Else Statements</h2>
-<div id="erklaerung">
+<div id="erklaerung" class="text-center">
     If-Else Statements erlauben es Code nur dann auszuführen, sollte zuvor eine Boolean zu True evaluiert werden, bzw. eine Aussage wahr sein. If-Else Statement werden überall verwendet und sind unfassbar wichtig.
+   
 </div>
+<br>
 <pre id="code">
 x = 2
 if x == 2:
@@ -62,11 +67,12 @@ else:
     Um ein Beispiel mit allen Funktionen zu geben:
 </div>
 <pre id="code">
+  <code>
 import sys
 
 def main():
     print("Programm fährt fort")
-    <span id="c">#Rest des Programmes</span>
+    <b id="c">#Rest des Programmes</b>
     sys.exit(0)
 
 def verification():
@@ -80,7 +86,7 @@ def verification():
         verification()
 
 verification()
-
+</code>
 </pre> <!--Warum pack ich hier recurrsion rein????? Ich will das nicht erklären-->
 <div id="erklaerung">
 Schritt für Schritt Erklärung: 

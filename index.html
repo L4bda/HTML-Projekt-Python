@@ -22,23 +22,27 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="loops.html">Loops</a>
-        </li>    
+        </li>   
+        <li class="nav-item">
+          <a class="nav-link" href="execute.html">Ausführen eines Python Scripts</a>
+          </li> 
       </ul>
     </nav>
     </div>
     <div id="main" class="mid px-3 text-wrap container-fluid text-break pt-2 pb-2"> <!-- hier kommt alles text rein -->
-      <h1>Python</h1>
-        Python ist eine <span data-tooltip="Objektorientierte Programmierung (OOP) ist ein Modell der Programmiersprachen bei welcher ein Objekt die Möglichkeit hat eine Funktion zu haben."><u>objektorientierte</u></span>,
-           <span data-tooltip="Der Code wird Zeile für Zeile hintereinander ausgeführt."><u>interpretierte</u></span> Programmiersprache. Python scripts können dadurch ausgeführt werden, in einem Terminal Emulator erst python , dann den namen des Files mit Endung .py und, falls benötigt, weitere Argumente anzugeben. Daraufhin ließt der Python Interpreter jede Zeile von oben nach unten und führt jene aus. 
-      <h2>1. print()</h2>
+      <h1 class="text-center">Python</h1>
+        <div class="text-center">Python ist eine <span data-tooltip="Objektorientierte Programmierung (OOP) ist ein Modell der Programmiersprachen bei welcher ein Objekt die Möglichkeit hat eine Funktion zu haben."><u>objektorientierte</u></span>,
+           <span data-tooltip="Der Code wird Zeile für Zeile hintereinander ausgeführt."><u>interpretierte</u></span> Programmiersprache. Python scripts können dadurch ausgeführt werden, in einem Terminal Emulator erst python , dann den namen des Files mit Endung .py und, falls benötigt, weitere Argumente anzugeben. Daraufhin ließt der Python Interpreter jede Zeile von oben nach unten und führt jene aus. </div>
+      <br>
+           <h2>1. print()</h2>
 
         <div id="erklaerung">
           Print (zu deutsch: Drucken) gibt einen druckt einen Text oder eine <span data-tooltip="Eine Variabel ist ein abstrakter Behälter für einen Wert"><u>Variabel</u></span> in der jeweiligen Konsole, die den Python-Script ausführt.<br>
           Beispiel:
         </div>
-      <div id="code">
-      print("Hello, World")
-      </div>
+      <pre id="code">
+print("Hello, World")
+      </pre>
       <br>
       <pre id="output">
 >>> Hello, World
@@ -46,12 +50,12 @@
     <div id="erklaerung">
       Um eine Variabel zu Drucken muss jene erst deklariert werden.
     </div>
-    <div id="code">
-      integer = 5<br>
-      string = "Hello,"<br>
-      irgendwas = 3<br>
-      zeug = "World"
-    </div> 
+    <pre id="code">
+integer = 5<br>
+string = "Hello,"<br>
+irgendwas = 3<br>
+zeug = "World"
+    </pre> 
     <div id="erklaerung">
       Eine Variabel kann in Python unter jeglichem Namen und mit jeglichem
        <span data-tooltip="Datentypen sind Arten auf die Programmiersprachen Daten in verschiedenen Formen speichern. Klassisch zählen Booleans, Integers, Floats, Doubles, Strings und Chars. Mehr dazu bei Datentypen"><u>Datentyp</u></span> deklariert werden. 
